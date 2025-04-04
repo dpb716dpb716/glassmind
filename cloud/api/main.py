@@ -39,7 +39,7 @@ async def shutdown():
 
 @app.get("/")
 async def read_root():
-    return {"message": "Welcome to the GlassMindz API"}
+    return {"message": "Welcome to the GlassMindddds API"}
 
 @app.post("/upload")
 async def upload_data(request: Request):
@@ -89,4 +89,4 @@ async def websocket_endpoint(websocket: WebSocket):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("cloud.api.main:app", host="0.0.0.0", port=8000, reload=True)
