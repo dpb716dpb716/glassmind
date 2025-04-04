@@ -1,8 +1,5 @@
 opencv-python
 mediapipe
-dlib
-face_recognition
-py-feat
 deepface
 librosa
 opensmile
@@ -17,7 +14,6 @@ fastapi
 uvicorn
 requests
 python-dotenv
-supabase-py
 torch
 transformers
 PyYAML
@@ -26,3 +22,8 @@ pytest
 pytest-mock
 gradio
 streamlit
+fastapi==0.95.0
+uvicorn[standard]==0.21.1
+sqlalchemy==1.4.47
+databases[sqlite]==0.6.1
+python-dotenv==0.21.0
