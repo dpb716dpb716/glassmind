@@ -74,12 +74,6 @@ manager = ConnectionManager()
 
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):
-    # Manually check the origin header (if desired)
-    origin = websocket.headers.get("origin")
-    allowed_origins = {"http://localhost:3000", "http://127.0.0.1:3000"}
-    if origin not in allowed_origins:
-        await websocket.close(code=1008)  # Policy Violation
-        return
     await websocket.accept()
     try:
         while True:
