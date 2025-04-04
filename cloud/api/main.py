@@ -29,6 +29,8 @@ async def startup():
         await database.execute(query)
         query = profiles.insert().values(name="Bob", emotion="neutral")
         await database.execute(query)
+        query = profiles.insert().values(name="Tim", emotion="neutral")
+        await database.execute(query)
 
 @app.on_event("shutdown")
 async def shutdown():
