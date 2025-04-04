@@ -4,7 +4,7 @@ from sqlalchemy import select
 from cloud.database.database import database, profiles
 
 app = FastAPI(
-    title="GlassMindz API",
+    title="GlassMinds API",
     description="API for GlassMindz behavioral analysis system",
     version="0.1"
 )
@@ -39,7 +39,7 @@ async def shutdown():
 
 @app.get("/")
 async def read_root():
-    return {"message": "Welcome to the GlassMindddds API"}
+    return {"message": "Welcome to the GlassMinds API"}
 
 @app.post("/upload")
 async def upload_data(request: Request):
