@@ -23,9 +23,9 @@ async def startup():
     # Optionally, populate sample data if no profiles exist
     query = select(profiles)
     results = await database.fetch_all(query)
-    if not results:
+    if results:
         # Insert sample profiles
-        query = profiles.insert().values(name="Alice", emotion="happy")
+        query = profiles.insert().values(name="tim", emotion="happy")
         await database.execute(query)
         query = profiles.insert().values(name="Bob", emotion="neutral")
         await database.execute(query)
