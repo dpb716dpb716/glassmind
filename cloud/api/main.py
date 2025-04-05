@@ -27,7 +27,7 @@ app.add_middleware(
 db_client = DynamoDBClient()
 
 # ---------------------------
-# SQL Database Related Events
+# SQL Database Related Events and Endpoints
 # ---------------------------
 @app.on_event("startup")
 async def startup():
@@ -48,9 +48,6 @@ async def startup():
 async def shutdown():
     await database.disconnect()
 
-# ---------------------------
-# General Endpoints
-# ---------------------------
 @app.get("/")
 async def read_root():
     return {"message": "Welcome to the GlassMinds API"}
@@ -75,8 +72,8 @@ async def get_profiles():
 # ---------------------------
 class SensorData(BaseModel):
     device_id: str = Field(..., example="smart_glasses_001")
-    data_type: str = Field(..., example="motion")  # e.g., 'facial_image', 'motion', etc.
-    payload: dict = Field(..., example={"x": 0.12, "y": -0.56, "z": 0.89})
+    data_type: str = Field(..., example="motion")
+    payload: dict = Field(..., example={"x": 0.12, "y": -0.56, "z": 0.29})
 
 @app.post("/api/data/ingest", status_code=201)
 async def ingest_sensor_data(data: SensorData):
@@ -129,7 +126,7 @@ async def websocket_endpoint(websocket: WebSocket):
         manager.disconnect(websocket)
 
 # ---------------------------
-# Main entry point
+# Main Entry Point
 # ---------------------------
 if __name__ == "__main__":
     import uvicorn
