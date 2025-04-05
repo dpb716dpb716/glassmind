@@ -1,15 +1,18 @@
-import React from "react";
-import Profiles from "./components/Profiles";
-import WebSocketDemo from './components/WebSocketDemo';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Dashboard from './pages/Dashboard';
+import PeoplePage from './pages/PeoplePage';
 
-const App = () => {
-  return (
-    <div className="App">
-      <h1>GlassMindz Dashboard</h1>
-        <p>Welcome to the dashboard! Live updates will appear below:</p>
-      <WebSocketDemo />
-      <Profiles />
+const App = () => (
+  <Router>
+    <div className="app-container">
+      {/* You can also include a global navigation here if desired */}
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/people" element={<PeoplePage />} />
+      </Routes>
     </div>
-  );
-};
+  </Router>
+);
+
 export default App;

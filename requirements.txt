@@ -22,8 +22,5 @@ pytest
 pytest-mock
 gradio
 streamlit
-fastapi==0.95.0
-uvicorn[standard]==0.21.1
-sqlalchemy==1.4.47
-databases[sqlite]==0.6.1
-python-dotenv==0.21.0
+boto3
+sqlalchemy

@@ -1,10 +1,10 @@
 // src/services/api.js
-const API_BASE_URL = "http://54.226.127.151";
+const API_BASE_URL = "http://54.226.127.151:8000";
 
 // GET: Root endpoint to fetch welcome message
 export const getWelcomeMessage = async () => {
   try {
-    const response = await fetch(`${API_BASE_URL}/`);
+    const response = await fetch(API_BASE_URL + "/");
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
@@ -18,7 +18,7 @@ export const getWelcomeMessage = async () => {
 // POST: Upload data endpoint
 export const uploadData = async (data) => {
   try {
-    const response = await fetch(`${API_BASE_URL}/upload`, {
+    const response = await fetch(API_BASE_URL + "/upload", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -38,7 +38,7 @@ export const uploadData = async (data) => {
 // GET: Profiles endpoint to fetch user profiles
 export const getProfiles = async () => {
   try {
-    const response = await fetch("http://localhost:8000/profiles");
+    const response = await fetch(API_BASE_URL + "/profiles");
     if (!response.ok) {
       throw new Error("Error fetching profiles");
     }

@@ -1,6 +1,8 @@
 // src/components/WebSocketDemo.js
 import React, { useEffect, useState } from "react";
 
+const API_BASE_URL = "http://54.226.127.151:8000\"";
+
 const WebSocketDemo = () => {
   const [ws, setWs] = useState(null);
   const [messages, setMessages] = useState([]);
@@ -8,7 +10,7 @@ const WebSocketDemo = () => {
 
   useEffect(() => {
     // Connect to the WebSocket endpoint
-    const socket = new WebSocket("http://127.0.0.1:8000/ws");
+    const socket = new WebSocket("http://54.226.127.151:8000/ws");
     socket.onopen = () => {
       console.log("Connected to WebSocket");
     };

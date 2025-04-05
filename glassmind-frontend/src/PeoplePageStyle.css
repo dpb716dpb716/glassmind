@@ -1,0 +1,203 @@
+:root {
+  --primary-color: #141414;
+  --secondary-color: #1e1e1e;
+  --accent-color: #007acc;       /* Using the same muted blue accent */
+  --bg-color: #0d0d0d;
+  --border-color: #2a2a2a;
+  --text-color: #e0e0e0;
+  --font-family: 'Roboto', sans-serif;
+}
+
+/* People Page Container */
+.people-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+  background: var(--bg-color);
+}
+
+/* Header */
+.people-page-header h1 {
+  margin: 0 0 20px 0;
+  color: var(--accent-color);
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* People Page Body */
+.people-page-body {
+  display: flex;
+  gap: 20px;
+}
+
+/* Filters Panel */
+.people-page-filters {
+  flex: 0 0 250px;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+.people-filter h2 {
+  color: var(--accent-color);
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.people-filter label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.people-filter input,
+.people-filter select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-color);
+}
+
+/* Content Area */
+.people-page-content {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+}
+
+/* People List */
+.people-list {
+  flex: 0 0 300px;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.people-list h2 {
+  color: var(--accent-color);
+  margin-top: 0;
+}
+
+.people-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.people-list li {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.people-list li:hover {
+  background-color: var(--primary-color);
+}
+
+.person-thumb {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+/* People Profile */
+.people-profile {
+  flex: 1;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+.people-profile.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.people-profile h2 {
+  color: var(--accent-color);
+  margin-top: 0;
+}
+
+/* Profile Image */
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 2px solid var(--accent-color);
+}
+
+/* Profile Details */
+.profile-details p {
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+/* Interactive Map Placeholder */
+.profile-map {
+  margin-top: 20px;
+}
+
+.profile-map h3 {
+  color: var(--accent-color);
+}
+
+.map-placeholder {
+  height: 200px;
+  background-color: var(--bg-color);
+  border: 1px dashed var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Known Relationships */
+.profile-relationships {
+  margin-top: 20px;
+}
+
+.profile-relationships h3 {
+  color: var(--accent-color);
+}
+
+.profile-relationships ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-relationships li {
+  padding: 5px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Emotional Scores */
+.profile-emotions {
+  margin-top: 20px;
+}
+
+.profile-emotions h3 {
+  color: var(--accent-color);
+}
