@@ -1,5 +1,5 @@
 // src/services/api.js
-const API_BASE_URL = "http://localhost:8000";
+const API_BASE_URL = "http://54.226.127.151";
 
 // GET: Root endpoint to fetch welcome message
 export const getWelcomeMessage = async () => {

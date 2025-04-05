@@ -3,6 +3,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy import select
 from cloud.database.database import database, profiles
 
+
+
 app = FastAPI(
     title="GlassMinds API",
     description="API for GlassMindz behavioral analysis system",
@@ -16,6 +18,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 @app.on_event("startup")
 async def startup():
