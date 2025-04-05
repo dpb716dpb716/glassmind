@@ -24,3 +24,5 @@ gradio
 streamlit
 boto3
 sqlalchemy
+dotenv
+pydantic
